@@ -1,0 +1,8 @@
+<html>
+<head>
+  <title><%= @page_title || "Default Title" %></title>
+</head>
+<body>
+  <%= @inner_content %>
+</body>
+</html>
