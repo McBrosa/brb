@@ -34,4 +34,3 @@ defmodule Brb.MixProject do
     ]
   end
 end
-

@@ -1,0 +1,19 @@
+meta {
+  name: Get message by id
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:4000/api/message?id=fac580d7-3204-475b-8f9d-a9b7f783ca99
+  body: none
+  auth: none
+}
+
+params:query {
+  id: fac580d7-3204-475b-8f9d-a9b7f783ca99
+}
+
+headers {
+  Content-Type: application/json
+}

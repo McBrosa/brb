@@ -3,7 +3,7 @@ defmodule Brb.Messages.Message do
   import Ecto.Changeset
 
   schema "messages" do
-    field :message_id, :binary_id, primary_key: true
+    field :message_id, :uuid, default: fragment("gen_random_uuid()"), primary_key: true
     field :message, :string
     field :reactions, {:array, :string}
 

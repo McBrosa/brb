@@ -8,23 +8,6 @@ defmodule BrbWeb do
     end
   end
 
-  def view do
-    quote do
-      import Phoenix.HTML
-      import Phoenix.HTML.Form
-      use PhoenixHTMLHelpers,
-        root: "lib/brb_web/templates",
-        namespace: BrbWeb
-
-      # Import convenience functions from controllers
-      import Phoenix.Controller,
-        only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
-
-      # Include shared imports and aliases for views
-      unquote(view_helpers())
-    end
-  end
-
   def router do
     quote do
       use Phoenix.Router
@@ -37,17 +20,6 @@ defmodule BrbWeb do
     quote do
       use Phoenix.Channel
       import BrbWeb.Gettext
-    end
-  end
-
-  defp view_helpers do
-    quote do
-      # Use Phoenix.Component for rendering functionality
-      use Phoenix.Component
-
-      import BrbWeb.ErrorHelpers
-      import BrbWeb.Gettext
-      alias BrbWeb.Router.Helpers, as: Routes
     end
   end
 

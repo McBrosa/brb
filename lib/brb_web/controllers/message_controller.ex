@@ -18,4 +18,14 @@ defmodule BrbWeb.MessageController do
         |> json(%{errors: changeset})
     end
   end
+
+  def index(conn, _params) do
+    messages = Messages.list_messages()
+    json(conn, %{messages: messages})
+  end
+
+  def show(conn, %{"message_id" => message_id}) do
+    message = Messages.get_message!(message_id)
+    json(conn, %{message: message})
+  end
 end

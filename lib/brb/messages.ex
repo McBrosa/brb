@@ -8,4 +8,12 @@ defmodule Brb.Messages do
     |> Message.changeset(attrs)
     |> Repo.insert()
   end
+
+  def list_messages do
+    Repo.all(Message)
+  end
+
+  def get_message!(message_id) do
+    Repo.get!(Message, message_id)
+  end
 end
