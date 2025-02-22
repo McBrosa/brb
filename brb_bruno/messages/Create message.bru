@@ -1,7 +1,7 @@
 meta {
   name: Create message
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
@@ -16,7 +16,9 @@ headers {
 
 body:json {
   {
-    "message": "Hello, world 2!",
-    "reactions": ["😊", "🎉"]
+    "message": "brb",
+    "reactions": ["😊", "🎉"],
+    "sender_phone_number": "123-456-7890",
+    "receiver_phone_number": "098-765-4321"
   }
 }
