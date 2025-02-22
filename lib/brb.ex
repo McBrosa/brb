@@ -11,13 +11,13 @@ defmodule Brb do
       {Phoenix.PubSub, name: Brb.PubSub},
       # Start the Endpoint (http/https)
       BrbWeb.Endpoint
-      # Start a worker by calling: ElixirChatApp.Worker.start_link(arg)
-      # {ElixirChatApp.Worker, arg}
+      # Start a worker by calling: Brb.Worker.start_link(arg)
+      # {Brb.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: ElixirChatApp.Supervisor]
+    opts = [strategy: :one_for_one, name: Brb.Supervisor]
     Supervisor.start_link(children, opts)
   end
 

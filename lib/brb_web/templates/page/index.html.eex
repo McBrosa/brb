@@ -1,2 +1,2 @@
-<h1><%= @page_title %></h1>
-<p>Welcome to the home page!</p>
+<h1>Welcome to Phoenix!</h1>
+<p>Your application is running.</p>

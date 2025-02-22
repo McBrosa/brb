@@ -10,7 +10,9 @@ defmodule BrbWeb do
 
   def view do
     quote do
-      use Phoenix.View,
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
+      use PhoenixHTMLHelpers,
         root: "lib/brb_web/templates",
         namespace: BrbWeb
 
@@ -40,11 +42,8 @@ defmodule BrbWeb do
 
   defp view_helpers do
     quote do
-      # Use all HTML functionality (forms, tags, etc)
-      use Phoenix.HTML
-
-      # Import basic rendering functionality (render, render_layout, etc)
-      import Phoenix.View
+      # Use Phoenix.Component for rendering functionality
+      use Phoenix.Component
 
       import BrbWeb.ErrorHelpers
       import BrbWeb.Gettext

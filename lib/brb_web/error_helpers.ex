@@ -1,5 +1,7 @@
 defmodule BrbWeb.ErrorHelpers do
-  use Phoenix.HTML
+  import Phoenix.HTML
+  import Phoenix.HTML.Form
+  use PhoenixHTMLHelpers
 
   @doc """
   Translates an error message using gettext.

@@ -43,3 +43,9 @@ else
 fi
 
 echo "PostgreSQL server is running and database $DB_NAME is ready."
+
+# Run migrations to set up the database
+echo "Running migrations..."
+mix ecto.migrate
+
+echo "Database setup complete."

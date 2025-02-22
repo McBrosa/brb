@@ -1,3 +1,4 @@
+# filepath: /Users/nrosa/Repos/brb/config/config.exs
 import Config
 
 # General application configuration

@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :brb, Brb.Repo,
-  username: System.get_env("USER") || System.get_env("USERNAME"),,
+  username: System.get_env("USER") || System.get_env("USERNAME"),
   password: "",
   database: "brb_test",
   hostname: "localhost",
