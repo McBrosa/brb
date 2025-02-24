@@ -30,7 +30,8 @@ defmodule Brb.MixProject do
       {:jason, "~> 1.4.4"},
       {:gettext, "~> 0.26.2"},
       {:plug_cowboy, "~> 2.7.2"},
-      {:phoenix_html_helpers, "~> 1.0"}
+      {:phoenix_html_helpers, "~> 1.0"},
+      {:phoenix_pubsub, "~> 2.0"}
     ]
   end
 end

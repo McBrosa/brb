@@ -3,7 +3,7 @@ defmodule Brb.Messages.Message do
   import Ecto.Changeset
 
   @primary_key {:message_id, :binary_id, autogenerate: true}
-  @derive {Jason.Encoder, only: [:message_id, :message, :reactions, :inserted_at, :updated_at, :sender_id, :receiver_id]}
+  @derive {Jason.Encoder, except: [:__meta__, :sender, :receiver]}
   schema "messages" do
     field :message, :string
     field :reactions, {:array, :string}

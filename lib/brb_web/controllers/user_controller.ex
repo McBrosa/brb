@@ -38,4 +38,9 @@ defmodule BrbWeb.UserController do
     messages = Messages.get_messages_by_phone_number(phone_number)
     json(conn, %{messages: messages})
   end
+
+  def get_messages_between_phone_numbers(conn, %{"phone_number1" => phone_number1, "phone_number2" => phone_number2}) do
+    messages = Messages.get_messages_between_phone_numbers(phone_number1, phone_number2)
+    json(conn, %{messages: messages})
+  end
 end

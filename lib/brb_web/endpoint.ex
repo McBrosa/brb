@@ -1,6 +1,10 @@
 defmodule BrbWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :brb
 
+  socket "/socket", BrbWeb.UserSocket,
+    websocket: true,
+    longpoll: false
+
   # Serve at "/" the static files from "priv/static" directory.
   plug(Plug.Static,
     at: "/",
